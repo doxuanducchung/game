@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgminigame"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/checkBoxSquirtle"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="Squirtle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPikachu"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="Pikachu"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxSquirtle"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMeowth"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:text="Meowth"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxPikachu"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarPikachu"
+        android:progressDrawable="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:thumb="@drawable/pikachu"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarSquirtle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxPikachu" />
+
+    <SeekBar
+        android:id="@+id/seekBarSquirtle"
+        android:progressDrawable="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:thumb="@drawable/squirtle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSquirtle" />
+    <SeekBar
+        android:id="@+id/seekBarMeowth"
+        android:progressDrawable="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:thumb="@drawable/meowth"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarPikachu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMeowth" />
+
+    <ImageButton
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonplay"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewThongbao"
+        android:textColor="#E90404"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMoney"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textViewMoney"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#FF00BF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="144dp"
+        android:layout_height="97dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/animalcrossing" />
+
+    <ImageButton
+        android:id="@+id/imageButtonMoney"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/money" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
